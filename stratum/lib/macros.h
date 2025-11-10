@@ -12,6 +12,22 @@
 #include "stratum/glue/status/status_macros.h"
 #include "stratum/public/lib/error.h"
 
+#ifndef EXCLUSIVE_LOCKS_REQUIRED
+#define EXCLUSIVE_LOCKS_REQUIRED(...)
+#endif
+
+#ifndef SHARED_LOCKS_REQUIRED
+#define SHARED_LOCKS_REQUIRED(...)
+#endif
+
+#ifndef LOCKS_EXCLUDED
+#define LOCKS_EXCLUDED(...)
+#endif
+
+#ifndef GUARDED_BY
+#define GUARDED_BY(...)
+#endif
+
 namespace stratum {
 
 // A simple class to explicitly cast the return value of an ::util::Status

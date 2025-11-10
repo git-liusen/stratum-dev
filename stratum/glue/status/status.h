@@ -14,6 +14,22 @@
 #include "stratum/glue/gtl/source_location.h"
 #include "stratum/glue/logging.h"
 
+#ifndef EXCLUSIVE_LOCKS_REQUIRED
+#define EXCLUSIVE_LOCKS_REQUIRED(...)
+#endif
+
+#ifndef SHARED_LOCKS_REQUIRED
+#define SHARED_LOCKS_REQUIRED(...)
+#endif
+
+#ifndef LOCKS_EXCLUDED
+#define LOCKS_EXCLUDED(...)
+#endif
+
+#ifndef GUARDED_BY
+#define GUARDED_BY(...)
+#endif
+
 // TODO(unknown): Move to Abseil-status when it is available.
 //
 namespace util {
